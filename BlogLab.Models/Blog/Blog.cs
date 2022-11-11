@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlogLab.Models.Blog
 {
-    internal class Blog : BlogCreate
+    public class Blog : BlogCreate
     {
         public string Username { get; set; }
 
