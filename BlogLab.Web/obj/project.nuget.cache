@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "zEQG3K9epH+Tb+zLFigmtxY8lcvMF6wVITC3wFPvxue/1IZUYJLNrslcCQ12CseEh01ScXM94qxQhjENbWYIeg==",
+  "dgSpecHash": "NYn3DKAlIoYdWXQRB9N0I5F8Bljmty7ZeoIz2b4EDnROeUGDUqY3rGTt6/cgu3S+QjKJBRAJYkAPZRiXPvBjFg==",
   "success": true,
   "projectFilePath": "C:\\KirtData\\Labs\\learn-web-development-by-building-a-blog\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
