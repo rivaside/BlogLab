@@ -443,3 +443,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+BlogLab.Web/appsettings.json
