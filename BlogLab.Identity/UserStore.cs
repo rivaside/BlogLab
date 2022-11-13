@@ -76,7 +76,7 @@ namespace BlogLab.Identity
 
         public Task<string> GetUserNameAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
         {
-            return Task.FromResult(user.UserName);
+            return Task.FromResult(user.Username);
         }
 
         public Task<bool> HasPasswordAsync(ApplicationUserIdentity user, CancellationToken cancellationToken)
@@ -115,7 +115,7 @@ namespace BlogLab.Identity
 
         public Task SetUserNameAsync(ApplicationUserIdentity user, string userName, CancellationToken cancellationToken)
         {
-            user.UserName = userName;
+            user.Username = userName;
             return Task.FromResult(0);
         }
 

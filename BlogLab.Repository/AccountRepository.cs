@@ -34,7 +34,7 @@ namespace BlogLab.Repository
             dataTable.Columns.Add("PasswordHash", typeof(string));
 
             dataTable.Rows.Add(
-                    user.UserName,
+                    user.Username,
                     user.NormalizedUsername,
                     user.Email,
                     user.NormalizedEmail,

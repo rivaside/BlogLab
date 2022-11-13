@@ -25,7 +25,7 @@ namespace BlogLab.Services
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.NameId, user.ApplicationUserId.ToString()),
-                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName.ToString())
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.Username.ToString())
             };
 
             var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);

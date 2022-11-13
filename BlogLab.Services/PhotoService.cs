@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BlogLab.Services
 {
-    public class PhotoService : IphotoService
+    public class PhotoService : IPhotoService
     {
         private readonly Cloudinary _cloudinary;
 

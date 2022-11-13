@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace BlogLab.Repository
 {
-    internal class BlogCommentRepository : IBlogCommentRepository
+    public class BlogCommentRepository : IBlogCommentRepository
     {
         public IConfiguration _config;
 
