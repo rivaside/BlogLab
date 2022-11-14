@@ -416,7 +416,7 @@ BEGIN
 
 		Update t1
 		SET
-			t1.[ActiveInd] = CONVERT(BIT, 1),
+			t1.[ActiveInd] = CONVERT(BIT, 0),
 			t1.[UpdateDate] = GETDATE()
 		FROM
 			[dbo].[BlogComment] t1
