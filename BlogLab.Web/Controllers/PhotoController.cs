@@ -64,7 +64,7 @@ namespace BlogLab.Web.Controllers
             return Ok(photos);
         }
 
-        [HttpGet("{photoId")]
+        [HttpGet("{photoId}")]
         public async Task<ActionResult<Photo>> Get(int photoId)
         {
             var photo = await _photoRepository.GetAsync(photoId);
@@ -73,7 +73,7 @@ namespace BlogLab.Web.Controllers
         }
 
         [Authorize]
-        [HttpDelete]
+        [HttpDelete("{photoId}")]
         public async Task<ActionResult<int>> Delete(int photoId)
         {
             int applicationUserId = int.Parse(User.Claims.First(i => i.Type == JwtRegisteredClaimNames.NameId).Value);

@@ -47,7 +47,7 @@ namespace BlogLab.Repository
             {
                 await connection.OpenAsync();
 
-                using (var multi = await connection.QueryMultipleAsync("Blog_All",
+                using (var multi = await connection.QueryMultipleAsync("Blog_GetAll",
                     new
                     {
                         Offset = (blogPaging.Page - 1) * blogPaging.PageSize,
@@ -120,14 +120,12 @@ namespace BlogLab.Repository
         {
             var dataTable = new DataTable();
             dataTable.Columns.Add("BlogId", typeof(string));
-            dataTable.Columns.Add("ApplicationUserId", typeof(string));
             dataTable.Columns.Add("Title", typeof(string));
             dataTable.Columns.Add("Content", typeof(string));
             dataTable.Columns.Add("PhotoId", typeof(string));
 
             dataTable.Rows.Add(
                     blogCreate.BlogId,
-                    applicationUserId,
                     blogCreate.Title,
                     blogCreate.Content,
                     blogCreate.PhotoId

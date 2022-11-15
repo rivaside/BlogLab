@@ -24,7 +24,7 @@ namespace BlogLab.Identity
             return await _accountRepository.CreateAsync(user, cancellationToken);
         }
 
-        public async Task<ApplicationUserIdentity?> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
+        public async Task<ApplicationUserIdentity> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
         {
             return await _accountRepository.GetByUsernameAsync(normalizedUserName, cancellationToken);
         }
@@ -34,12 +34,12 @@ namespace BlogLab.Identity
             throw new NotImplementedException();
         }
         
-        public Task<ApplicationUserIdentity?> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
+        public Task<ApplicationUserIdentity> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ApplicationUserIdentity?> FindByIdAsync(string userId, CancellationToken cancellationToken)
+        public Task<ApplicationUserIdentity> FindByIdAsync(string userId, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
