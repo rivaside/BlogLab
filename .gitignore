@@ -445,3 +445,4 @@ testem.log
 Thumbs.db
 BlogLab.Web/appsettings.json
 BlogLab.Web/obj/
+BlogLab-UI/.angular/cache/
