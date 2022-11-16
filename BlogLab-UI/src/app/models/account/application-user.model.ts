@@ -1,4 +1,4 @@
-export class ApplicationUserLogin {
+export class ApplicationUser {
 
     constructor(
         public applicationUserId: number,
