@@ -1,11 +1,14 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { trigger, state, style, transition, animate, group } from '@angular/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { ToastrModule } from 'ngx-toastr'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { BlogComponent } from './components/blog-components/blog/blog.component';
 import { BlogCardComponent } from './components/blog-components/blog-card/blog-card.component';
@@ -23,6 +26,7 @@ import { PhotoAlbumComponent } from './components/photo-album/photo-album.compon
 import { RegisterComponent } from './components/register/register.component';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -42,15 +46,19 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     LoginComponent,
     NotFoundComponent,
     PhotoAlbumComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
-    })
+    }),
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot()
   ],
   providers: [
     HttpClient,
