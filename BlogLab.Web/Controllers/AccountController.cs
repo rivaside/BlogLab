@@ -44,7 +44,7 @@ namespace BlogLab.Web.Controllers
                 ApplicationUser applicationUser = new ApplicationUser()
                 {
                     ApplicationUserId = applicationUserIdentity.ApplicationUserId,
-                    UserName = applicationUserIdentity.Username,
+                    Username = applicationUserIdentity.Username,
                     Email = applicationUserIdentity.Email,
                     Fullname = applicationUserIdentity.Fullname,
                     Token = _tokenService.createToken(applicationUserIdentity)
@@ -72,7 +72,7 @@ namespace BlogLab.Web.Controllers
                     ApplicationUser applicationUser = new ApplicationUser()
                     {
                         ApplicationUserId = applicationUserIdentity.ApplicationUserId,
-                        UserName = applicationUserIdentity.Username,
+                        Username = applicationUserIdentity.Username,
                         Email = applicationUserIdentity.Email,
                         Fullname = applicationUserIdentity.Fullname,
                         Token = _tokenService.createToken(applicationUserIdentity)

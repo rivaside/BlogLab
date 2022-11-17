@@ -16,7 +16,7 @@ export class AccountService {
   constructor(
     private http: HttpClient
     ) { 
-      this.currentUserSubject$ = new BehaviorSubject<ApplicationUser | null>(JSON.parse(localStorage.getItem('blogLab-currentuser')!));
+      this.currentUserSubject$ = new BehaviorSubject<ApplicationUser | null>(JSON.parse(localStorage.getItem('blogLab-currentUser')!));
     }
   
   login(model: ApplicationUserLogin) : Observable<ApplicationUser> {
@@ -25,7 +25,7 @@ export class AccountService {
       map((user : ApplicationUser) => {
 
         if (user) {
-          localStorage.setItem('blogLab-currentuser', JSON.stringify(user));
+          localStorage.setItem('blogLab-currentUser', JSON.stringify(user));
           this.setCurrentUser(user);
         }
 
@@ -48,7 +48,7 @@ export class AccountService {
       map((user : ApplicationUser) => {
 
         if (user) {
-          localStorage.setItem('blogLab-currentuser', JSON.stringify(user));
+          localStorage.setItem('blogLab-currentUser', JSON.stringify(user));
           this.setCurrentUser(user);
         }
 
