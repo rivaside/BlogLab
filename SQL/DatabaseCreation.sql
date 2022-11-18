@@ -1,4 +1,9 @@
 
+IF NOT EXISTS(select 1 from sys.databases where name = 'BlogDB')
+BEGIN
+	CREATE DATABASE BlogDB
+END
+
 USE [BlogDB]
 
 IF NOT EXISTS(SELECT 1 FROM sys.tables WHERE name = 'ApplicationUser')
@@ -421,9 +426,7 @@ BEGIN
 		FROM
 			[dbo].[BlogComment] t1
 			INNER JOIN #BlogCommentsToBeDeleted t2
-				ON t1.[BlogCommentId] = t2.[BlogCommentId];
-
-		GO'
+				ON t1.[BlogCommentId] = t2.[BlogCommentId];'
 END
 
 IF NOT EXISTS (SELECT 1 FROM sys.procedures WHERE name = 'BlogComment_Get')
@@ -445,8 +448,7 @@ BEGIN
 			[aggregate].[BlogComment] t1
 		WHERE
 			t1.[BlogCommentId] = @BlogCommentId AND
-			t1.[ActiveInd] = CONVERT(BIT, 1)
-	GO'
+			t1.[ActiveInd] = CONVERT(BIT, 1)'
 END
 
 
@@ -473,8 +475,7 @@ BEGIN
 			t1.[ActiveInd] = CONVERT(BIT, 1)
 		ORDER BY
 			t1.[UpdateDate] 
-		DESC
-	GO'
+		DESC'
 END
 
 IF NOT EXISTS (SELECT 1 FROM sys.procedures WHERE name = 'BlogComment_Upsert')
