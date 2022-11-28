@@ -225,13 +225,16 @@ BEGIN
 	@BlogId INT
 AS
 	UPDATE [dbo].[BlogComment]
-	SET [ActiveInd] = CONVERT(BIT, 0)
-	WHERE [BlogId] = @BlogId;
+	SET 
+		[ActiveInd] = CONVERT(BIT, 0), [UpdateDate] = GetDate()
+	WHERE 
+		[BlogId] = @BlogId;
 
 	UPDATE [dbo].[Blog]
 	SET
 		[PhotoId] = NULL,
-		[ActiveInd] = CONVERT(BIT, 0)
+		[ActiveInd] = CONVERT(BIT, 0),
+		[UpdateDate] = GetDate()
 	WHERE
 		BlogId = @BlogId'
 END
