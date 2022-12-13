@@ -3,8 +3,8 @@
         <h1 class="display-4 mt-5">{{ isNew() ? 'Create' : 'Edit' }} Blog</h1>
     </div>
 
-    <a *ngIf="!isNew()" routerLink="/blogs/{{ blogForm?.get('blogId')?.value }}"
-        class="badge badge-primary mb-2 p-2">
+    <a *ngIf="!isNew()" routerLink="/blogs/{{ blogForm.get('blogId')?.value }}"
+        class="badge bg-primary mb-2 p-2">
         Preview Blog
     </a>
 

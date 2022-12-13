@@ -37,13 +37,13 @@
                         {{ userBlog.content | summary:90 }}
                     </td>
                     <td>
-                        <button class="btn btn-info d-inline mr-1" (click)="editBlog(userBlog.blogId)">
+                        <button class="btn btn-info d-inline me-1" (click)="editBlog(userBlog.blogId)">
                             Edit
                         </button>
 
                         <button 
                         *ngIf="!userBlog.deleteConfirm"
-                        class="btn btn-danger d-inline" (click)="confirmDelete(userBlog)">
+                        class="btn btn-danger d-inline me-1" (click)="confirmDelete(userBlog)">
                             Delete
                         </button>
 
