@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentSystemComponent implements OnInit {
 
+  blogId?: number;
+
   constructor() { }
 
   ngOnInit(): void {
