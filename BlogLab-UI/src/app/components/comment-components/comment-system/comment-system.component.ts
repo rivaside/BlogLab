@@ -13,7 +13,7 @@ export class CommentSystemComponent implements OnInit {
 
   @Input() blogId?: number;
 
-  standAloneComment?: BlogCommentViewModel;
+  standAloneComment!: BlogCommentViewModel;
   blogComments: BlogComment[] = [];
   blogCommentViewModels: BlogCommentViewModel[] = [];
 
