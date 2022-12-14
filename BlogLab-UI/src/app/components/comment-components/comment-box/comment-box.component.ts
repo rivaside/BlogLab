@@ -13,10 +13,11 @@ import { BlogCommentService } from 'src/app/services/blog-comment.service';
 })
 export class CommentBoxComponent implements OnInit {
 
-  @Input() comment!: BlogCommentViewModel;
+  @Input()
+  comment!: BlogCommentViewModel;
   @Output() commentSaved = new EventEmitter<BlogComment>();
 
-  @ViewChild('commentForm') commentForm?: NgForm;
+  @ViewChild('commentForm') commentForm!: NgForm;
 
   constructor(
     private blogCommentService: BlogCommentService,
@@ -27,21 +28,22 @@ export class CommentBoxComponent implements OnInit {
   }
 
   resetComment() {
-    this.commentForm?.reset();
+    this.commentForm.reset();
   }
 
   onSubmit() {
+
     let blogCommentCreate: BlogCommentCreate = {
-      blogCommentId: this.comment?.blogCommentId!,
+      blogCommentId: this.comment.blogCommentId,
       parentBlogCommentId: this.comment?.parentBlogCommentId!,
       blogId: this.comment.blogId,
       content: this.comment.content
-    }
+    };
 
     this.blogCommentService.create(blogCommentCreate).subscribe(blogComment => {
-      this.commentSaved.emit(blogComment);
+      this.toastr.info("Comment saved.");
       this.resetComment();
-      this.toastr.info("comment saved")
+      this.commentSaved.emit(blogComment);
     })
   }
 }

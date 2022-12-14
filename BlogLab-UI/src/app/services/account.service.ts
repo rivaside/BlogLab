@@ -68,4 +68,8 @@ export class AccountService {
     localStorage.removeItem('blogLab-currentUser');
     this.currentUserSubject$.next(null);
   }
+
+  public givenUserIsLoggedIn(username: string) : boolean {
+    return this.isLoggedIn() && this.currentUserValue?.username === username;
+  }
 } 
