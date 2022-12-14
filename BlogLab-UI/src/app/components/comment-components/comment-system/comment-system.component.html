@@ -1,4 +1,4 @@
-<div *ngIf="accountService.isLoggedIn()" && !!standAloneComment>
+<div *ngIf="accountService.isLoggedIn() && !!standAloneComment">
     <div class="mb-3">
         <app-comment-box
         [comment]="standAloneComment"
